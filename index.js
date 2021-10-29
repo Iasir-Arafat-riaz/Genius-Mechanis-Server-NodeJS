@@ -9,7 +9,7 @@ const app = express();
 //middleware
 app.use(cors());
 app.use(express.json());
-const port = 4000;
+const port = process.env.PORT||4000;
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.gukqi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
