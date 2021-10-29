@@ -65,6 +65,9 @@ run().catch(console.dir);
 app.get("/", (req, res) => {
   res.send("yes got this server responsees yes yes yes");
 });
+app.get("/extra",(req,res)=>{
+  res.send("this is extra feature")
+})
 app.listen(port, () => {
   console.log("listening to ", port);
 });
